@@ -2,3 +2,6 @@
 
 (defn doublificate [i-need-a-name]
   ":(")
+
+(defn halve [collection]
+  ":(")
