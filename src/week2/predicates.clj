@@ -8,3 +8,6 @@
 
 (defn empty-string? [string]
   ":(")
+
+(defn pred-and [pred1 pred2]
+  ":(")
