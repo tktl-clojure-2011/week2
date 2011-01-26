@@ -27,3 +27,12 @@
            => "China Miéville"
        (has-title-and-author? {:title "Author unknown"})
            => nil)
+
+(def books [{:author "China Miéville" :title "Kraken"} 
+            {:author "China Miéville" :title "The City and the City"} 
+            {:author "Haruki Murakami" :title "Norwegian Wood"} 
+            {:author "Guy Gavriel Kay" :title "Under Heaven"}])
+
+(facts "every-book-has-a-title?"
+       (every-book-has-a-title? books) => true
+       (every-book-has-a-title? [{:author "I don't have a book"}] => false))

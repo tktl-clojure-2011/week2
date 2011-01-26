@@ -10,4 +10,7 @@
   ":(")
 
 (defn pred-and [pred1 pred2]
+  identity)
+
+(defn every-book-has-a-title? [books]
   ":(")
