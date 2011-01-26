@@ -9,3 +9,7 @@
 (facts "halve"
        (halve [1 2 3 4])   => (just (just 1 2) (just 3 4))
        (halve [1 2 3 4 5]) => (just (just 1 2 3) (just 4 5)))
+
+(facts "first-five-positives"
+       (first-five-positives [1 3 -2 3 2 0 10 -1 42]) => (just 1 3 3 2 10)
+       (first-five-positives [1 -2 9 -4 -5])          => (just 1 9))

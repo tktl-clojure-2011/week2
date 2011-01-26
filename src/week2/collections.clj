@@ -5,3 +5,6 @@
 
 (defn halve [collection]
   ":(")
+
+(defn first-five-positives [a-seq]
+  ":(")
