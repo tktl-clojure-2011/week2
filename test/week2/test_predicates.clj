@@ -42,3 +42,8 @@
        (first-value-for-key :a [{:b 1 :c 2} {:a 1 :b 2} {:a 2}])  => 1
        (first-value-for-key :a [{:b 1 :c 2} {:c 3}])              => nil)
 
+(facts "prime?"
+       (prime? 4)   => falsey
+       (prime? 17)  => truthy
+       (prime? 103) => truthy
+       (prime? 119) => falsey)

@@ -17,3 +17,6 @@
 
 (defn first-value-for-key [key maps]
   ":(")
+
+(defn prime? [number]
+  ":(")
