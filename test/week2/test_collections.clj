@@ -16,3 +16,9 @@
 
 (fact "snip"
       (snip [1 4 2 :snip 8 2 9]) => (just (just 1 4 2) (just 8 2 9)))
+
+(facts "monotonic?"
+       (monotonic? [1 2 3])   => truthy
+       (monotonic? [3 2 1 0]) => truthy
+       (monotonic? [3 2 2])   => truthy
+       (monotonic? [1 2 1 0]) => falsey)

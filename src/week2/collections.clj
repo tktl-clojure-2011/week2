@@ -11,3 +11,6 @@
 
 (defn snip [a-seq]
   ":(")
+
+(defn monotonic? [a-seq]
+  ":(")
