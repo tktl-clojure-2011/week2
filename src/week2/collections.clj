@@ -8,3 +8,6 @@
 
 (defn first-five-positives [a-seq]
   ":(")
+
+(defn snip [a-seq]
+  ":(")
