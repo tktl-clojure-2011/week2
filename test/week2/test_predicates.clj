@@ -35,4 +35,4 @@
 
 (facts "every-book-has-a-title?"
        (every-book-has-a-title? books) => true
-       (every-book-has-a-title? [{:author "I don't have a book"}] => false))
+       (every-book-has-a-title? [{:author "I don't have a book"}]) => false)
