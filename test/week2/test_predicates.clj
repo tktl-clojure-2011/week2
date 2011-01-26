@@ -9,3 +9,8 @@
        (generic-doublificate {})     => nil?
        (generic-doublificate [])     => nil?
        (generic-doublificate {:a 1}) => true)
+
+(facts "empty-string?"
+       (empty-string? " \t\n\t ") => true
+       (empty-string? "  \t a")   => false
+       (empty-string? "")         => true)
