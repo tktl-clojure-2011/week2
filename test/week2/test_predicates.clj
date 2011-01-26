@@ -36,3 +36,9 @@
 (facts "every-book-has-a-title?"
        (every-book-has-a-title? books) => true
        (every-book-has-a-title? [{:author "I don't have a book"}]) => false)
+
+
+(facts "first-value-for-key"
+       (first-value-for-key :a [{:b 1 :c 2} {:a 1 :b 2} {:a 2}])  => 1
+       (first-value-for-key :a [{:b 1 :c 2} {:c 3}])              => nil)
+

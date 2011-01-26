@@ -14,3 +14,6 @@
 
 (defn every-book-has-a-title? [books]
   ":(")
+
+(defn first-value-for-key [key maps]
+  ":(")
