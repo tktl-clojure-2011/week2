@@ -23,6 +23,11 @@
        (monotonic? [3 2 2])   => truthy
        (monotonic? [1 2 1 0]) => falsey)
 
+(facts "exterminate"
+       (exterminate {})                         => {}
+       (exterminate {3 2, 5 1})                 => {}
+       (exterminate {1 3, 4 2, 5 7, 10 9, 8 8}) => {1 3, 5 7, 8 8})
+
 (facts "take-3"
        (take-3 [1 2 3 4 5]) => [1 2 3]
        (take-3 ["Haruki" "Murakami"]) => ["Haruki" "Murakami" nil])

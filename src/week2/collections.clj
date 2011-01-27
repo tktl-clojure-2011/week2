@@ -15,6 +15,9 @@
 (defn monotonic? [a-seq]
   ":(")
 
+(defn exterminate [a-map]
+  ":(")
+
 (defn take-3 [a-seq]
   ":(")
 
@@ -29,3 +32,5 @@
 
 (defn author-birth-years [books]
   ":(")
+
+;(
