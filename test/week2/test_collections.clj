@@ -54,6 +54,11 @@
        (my-keys {:title "Norwegian Wood" :author "Haruki Murakami"})
            => (just :title :author))
 
+(fact "who-wrote"
+      (who-wrote [{:author "Me" :title "Best Book"}
+                  {:author "Sam" :title "This Other Book"}] 1)
+          => "Sam")
+
 (def books [{:author {:name "Haruki Murakami"
                       :birth-year 1949}
              :title "Norwegian Wood"}

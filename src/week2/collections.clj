@@ -30,6 +30,9 @@
 (defn my-keys [a-map]
   ":(")
 
+(defn who-wrote [books index]
+  ":(")
+
 (defn author-birth-years [books]
   ":(")
 
