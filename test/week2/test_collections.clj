@@ -27,6 +27,14 @@
        (take-3 [1 2 3 4 5]) => [1 2 3]
        (take-3 ["Haruki" "Murakami"]) => ["Haruki" "Murakami" nil])
 
+(facts "author-to-string"
+       (author-to-string {:name "Shakespeare, William"
+                          :birth-year 1564, :death-year 1616})
+           => "Shakespeare, William (1564-1616)"
+       (author-to-string {:name "Doyle, Arthur Conan, Sir"
+                          :birth-year 1859, :death-year 1930})
+           => "Doyle, Arthur Conan, Sir (1859-1930")
+
 
 (fact "book-to-string"
       (book-to-string {:title "Nuoren Robertin matka Grönlantiin isäänsä hakemaan"

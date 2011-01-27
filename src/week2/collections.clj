@@ -18,5 +18,8 @@
 (defn take-3 [a-seq]
   ":(")
 
+(defn author-to-string [author]
+  ":(")
+
 (defn book-to-string [book]
   ":(")
