@@ -48,3 +48,15 @@
            => (just :name :birth-year :death-year)
        (my-keys {:title "Norwegian Wood" :author "Haruki Murakami"})
            => (just :title :author))
+
+(def books [{:author {:name "Haruki Murakami"
+                      :birth-year 1949}
+             :title "Norwegian Wood"}
+            {:author {:name "David Mitchell"}
+             :title "The Thousand Autumns of Jacob de Zoet"}
+            {:author {:name "Guy Gavriel Kay"
+                      :birth-year 1954}
+             :title "Under Heaven"}])
+
+(fact "author-birth-years"
+      (author-birth-years books) => (just 1949 1954))
