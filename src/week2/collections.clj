@@ -23,3 +23,6 @@
 
 (defn book-to-string [book]
   ":(")
+
+(defn my-keys [a-map]
+  ":(")

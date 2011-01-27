@@ -41,3 +41,10 @@
                        :author {:name "Hoffmann, Franz"
                                 :birth-year 1814, :death-year 1882}})
           => "A book, Nuoren Robertin matka Grönlantiin isäänsä hakemaan, written by Hoffmann, Franz (1814-1882)")
+
+(facts "my-keys"
+       (my-keys {:name "Doyle, Arthur Conan, Sir"
+                 :birth-year 1859, :death-year 1930})
+           => (just :name :birth-year :death-year)
+       (my-keys {:title "Norwegian Wood" :author "Haruki Murakami"})
+           => (just :title :author))
