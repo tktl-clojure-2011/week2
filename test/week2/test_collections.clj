@@ -22,3 +22,7 @@
        (monotonic? [3 2 1 0]) => truthy
        (monotonic? [3 2 2])   => truthy
        (monotonic? [1 2 1 0]) => falsey)
+
+(facts "take-3"
+       (take-3 [1 2 3 4 5]) => [1 2 3]
+       (take-3 ["Haruki" "Murakami"]) => ["Haruki" "Murakami" nil])

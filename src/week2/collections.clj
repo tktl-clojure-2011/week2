@@ -14,3 +14,6 @@
 
 (defn monotonic? [a-seq]
   ":(")
+
+(defn take-3 [a-seq]
+  ":(")
