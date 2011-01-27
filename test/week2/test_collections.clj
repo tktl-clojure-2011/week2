@@ -33,7 +33,7 @@
            => "Shakespeare, William (1564-1616)"
        (author-to-string {:name "Doyle, Arthur Conan, Sir"
                           :birth-year 1859, :death-year 1930})
-           => "Doyle, Arthur Conan, Sir (1859-1930")
+           => "Doyle, Arthur Conan, Sir (1859-1930)")
 
 
 (fact "book-to-string"
