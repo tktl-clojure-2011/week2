@@ -26,3 +26,10 @@
 (facts "take-3"
        (take-3 [1 2 3 4 5]) => [1 2 3]
        (take-3 ["Haruki" "Murakami"]) => ["Haruki" "Murakami" nil])
+
+
+(fact "book-to-string"
+      (book-to-string {:title "Nuoren Robertin matka Grönlantiin isäänsä hakemaan"
+                       :author {:name "Hoffmann, Franz"
+                                :birth-year 1814, :death-year 1882}})
+          => "A book, Nuoren Robertin matka Grönlantiin isäänsä hakemaan, written by Hoffmann, Franz (1814-1882)")
