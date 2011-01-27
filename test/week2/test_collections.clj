@@ -70,3 +70,12 @@
 
 (fact "author-birth-years"
       (author-birth-years books) => (just 1949 1954))
+
+(fact "add-at"
+      (add-at [[1 2 3]
+               [4 5 6]
+               [7 8 9]]
+              [1 1]
+              [2 1])    => [[1 2  3]
+                            [4 13 6]
+                            [7 8  9]])
