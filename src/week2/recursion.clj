@@ -12,4 +12,7 @@
 (defn seq= [seq-1 seq-2]
   ":(")
 
+(defn power [n k]
+  ":(")
+
 ;(
