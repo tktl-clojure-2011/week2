@@ -13,3 +13,8 @@
        (last-element [])      => nil
        (last-element [1 2 3]) => 3
        (last-element [2 5])   => 5)
+
+(facts "sequence-contains?"
+       (sequence-contains? 3 [1 2 3]) => true
+       (sequence-contains? 3 [4 7 9]) => false
+       (sequence-contains? :pony [])  => false)

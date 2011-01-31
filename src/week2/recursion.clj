@@ -6,4 +6,7 @@
 (defn last-element [coll]
   ":(")
 
+(defn sequence-contains? [element a-seq]
+  ":(")
+
 ;(
