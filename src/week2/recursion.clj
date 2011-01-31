@@ -3,4 +3,7 @@
 (defn product [coll]
   ":(")
 
+(defn last-element [coll]
+  ":(")
+
 ;(
