@@ -45,3 +45,11 @@
        (my-range 1)  => [0]
        (my-range 2)  => [1 0]
        (my-range 3)  => [2 1 0])
+
+(facts "map-1"
+       (map-1 identity [])                 => []
+       (map-1 identity [1 2 3])            => [1 2 3]
+       (map-1 count ["aaa" "bb" "cccc"])   => [3 2 4]
+       (map-1 first [[1 2] [4] [7 12 28]]) => [1 4 7]
+       (map-1 zero? [0 2 0 13 4 0])
+           => [true false true false false true])

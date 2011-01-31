@@ -21,4 +21,7 @@
 (defn my-range [up-to]
   ":(")
 
+(defn map-1 [f coll]
+  ":(")
+
 ;(
