@@ -30,4 +30,7 @@
 (defn inits [coll]
   ":(")
 
+(defn split-into-monotonics [coll]
+  ":(")
+
 ;(
