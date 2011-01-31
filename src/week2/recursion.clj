@@ -9,4 +9,7 @@
 (defn sequence-contains? [element a-seq]
   ":(")
 
+(defn seq= [seq-1 seq-2]
+  ":(")
+
 ;(

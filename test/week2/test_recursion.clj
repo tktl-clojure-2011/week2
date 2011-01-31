@@ -18,3 +18,8 @@
        (sequence-contains? 3 [1 2 3]) => true
        (sequence-contains? 3 [4 7 9]) => false
        (sequence-contains? :pony [])  => false)
+
+(facts "seq="
+       (seq= [1 2 4] '(1 2 4))  => true
+       (seq= [1 2 3] [1 2 3 4]) => false
+       (seq= [1 3 5] [])        => false)
