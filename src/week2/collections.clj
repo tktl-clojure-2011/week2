@@ -15,6 +15,9 @@
 (defn monotonic? [a-seq]
   ":(")
 
+(defn transpose [matrix]
+  ":(")
+
 (defn exterminate [a-map]
   ":(")
 
