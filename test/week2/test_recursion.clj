@@ -53,3 +53,14 @@
        (map-1 first [[1 2] [4] [7 12 28]]) => [1 4 7]
        (map-1 zero? [0 2 0 13 4 0])
            => [true false true false false true])
+
+(facts "tails"
+       (tails [1 2 3 4])   => #{[1 2 3 4] [2 3 4] [3 4] [4] []}
+       (tails [])          => #{[]}
+       (tails [1])         => #{[1] []})
+
+(facts "inits"
+       [inits [1 2 3 4]]   => #{[] [1] [1 2] [1 2 3] [1 2 3 4]}
+       (inits [])          => #{[]}
+       (inits [1])         => #{[1] []})
+

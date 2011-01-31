@@ -24,4 +24,10 @@
 (defn map-1 [f coll]
   ":(")
 
+(defn tails [coll]
+  ":(")
+
+(defn inits [coll]
+  ":(")
+
 ;(
