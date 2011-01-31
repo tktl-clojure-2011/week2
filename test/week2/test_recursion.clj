@@ -29,3 +29,13 @@
        (power 5 3)  => 125
        (power 7 0)  => 1
        (power 0 10) => 0)
+
+(facts "fibonacci"
+       (fib 0) => 0
+       (fib 1) => 1
+       (fib 2) => 1
+       (fib 3) => 2
+       (fib 4) => 3
+       (fib 5) => 5
+       (fib 6) => 8
+       (fib 10) => 55)
