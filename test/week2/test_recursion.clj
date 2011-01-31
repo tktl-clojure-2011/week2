@@ -30,7 +30,7 @@
        (power 7 0)  => 1
        (power 0 10) => 0)
 
-(facts "fibonacci"
+(facts "fib"
        (fib 0) => 0
        (fib 1) => 1
        (fib 2) => 1

@@ -15,7 +15,7 @@
 (defn power [n k]
   ":(")
 
-(defn fibonacci [n]
+(defn fib [n]
   ":(")
 
 ;(
