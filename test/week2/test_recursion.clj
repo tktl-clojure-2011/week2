@@ -55,12 +55,12 @@
            => [true false true false false true])
 
 (facts "tails"
-       (tails [1 2 3 4])   => #{[1 2 3 4] [2 3 4] [3 4] [4] []}
-       (tails [])          => #{[]}
-       (tails [1])         => #{[1] []})
+       (tails [1 2 3 4])   => (just [[1 2 3 4] [2 3 4] [3 4] [4] empty?] :in-any-order)
+       (tails [])          => (just [empty?] :in-any-order)
+       (tails [1])         => (just [[1] empty?] :in-any-order))
 
 (facts "inits"
-       [inits [1 2 3 4]]   => #{[] [1] [1 2] [1 2 3] [1 2 3 4]}
-       (inits [])          => #{[]}
-       (inits [1])         => #{[1] []})
+       (inits [1 2 3 4])   => (just [empty? [1] [1 2] [1 2 3] [1 2 3 4]] :in-any-order)
+       (inits [])          => (just [empty?] :in-any-order)
+       (inits [1])         => (just [empty? [1]] :in-any-order))
 
