@@ -39,3 +39,9 @@
        (fib 5) => 5
        (fib 6) => 8
        (fib 10) => 55)
+
+(facts "my-range"
+       (my-range 0)  => nil
+       (my-range 1)  => [0]
+       (my-range 2)  => [1 0]
+       (my-range 3)  => [2 1 0])
