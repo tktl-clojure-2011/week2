@@ -48,4 +48,7 @@
 (defn seq-merge [seq1 seq2]
   ":(")
 
+(defn mergesort [a-seq]
+  ":(")
+
 ;(
