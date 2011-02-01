@@ -51,4 +51,7 @@
 (defn mergesort [a-seq]
   ":(")
 
+(defn permutations [a-seq]
+  ":(")
+
 ;(

@@ -96,3 +96,8 @@
        (mergesort [1 2 3])            => '(1 2 3)
        (mergesort [5 3 4 17 2 100 1]) => '(1 2 3 4 5 17 100))
 
+(facts "permutations"
+       (permutations [])      => empty?
+       (permutations [1 5 3])
+           => '((1 5 3) (5 1 3) (5 3 1) (1 3 5) (3 1 5) (3 5 1)))
+
