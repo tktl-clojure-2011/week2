@@ -72,3 +72,10 @@
        (rotations [])      => empty?
        (rotations [1 2 3]) => '((1 2 3) (2 3 1) (3 1 2))
        (rotations [:a :b]) => '((:a :b) (:b :a)))
+
+(facts "my-frequencies"
+       (my-frequencies []) => {}
+       (my-frequencies [1 1 2 2 :D :D :D]) => {1 2, 2 2, :D 3}
+       (my-frequencies [:a "moi" :a "moi" "moi" :a 1])
+           => {:a 3, "moi" 3, 1 1})
+

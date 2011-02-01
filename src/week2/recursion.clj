@@ -36,4 +36,7 @@
 (defn rotations [a-seq]
   ":(")
 
+(defn my-frequencies [coll]
+  ":(")
+
 ;(
