@@ -87,3 +87,7 @@
        (my-frequencies (un-frequencies {:a 100 :b 10}))
            => {:a 100 :b 10})
 
+(facts "seq-merge"
+       (seq-merge [4] [1 2 6 7])        => '(1 2 4 6 7)
+       (seq-merge [1 5 7 9] [2 2 8 10]) => '(1 2 2 5 7 8 9 10))
+
