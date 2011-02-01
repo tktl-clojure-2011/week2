@@ -33,4 +33,7 @@
 (defn split-into-monotonics [coll]
   ":(")
 
+(defn rotations [a-seq]
+  ":(")
+
 ;(

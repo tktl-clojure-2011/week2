@@ -67,3 +67,8 @@
 (facts "split-into-monotonics"
        (split-into-monotonics [0 1 2 1 0])   => '((0 1 2) (1 0))
        (split-into-monotonics [0 5 4 7 1 3]) => '((0 5) (4 7) (1 3)))
+
+(facts "rotations"
+       (rotations [])      => '()
+       (rotations [1 2 3]) => '((1 2 3) (2 3 1) (3 1 2))
+       (rotations [:a :b]) => '((:a :b) (:b :a)))
