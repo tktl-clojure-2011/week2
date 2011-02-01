@@ -104,5 +104,5 @@
 
 (facts "powerset"
        (powerset [])      => '(())
-       (powerset [1 2 4]) => #{#{} #{4} #{2} #{2 4} #{1} #{1 4} #{1 2} #{1 2 4}})
+       (powerset [1 2 4]) => (just [empty? [4] [2] [2 4] [1] [1 4] [1 2] [1 2 4]] :in-any-order))
 
