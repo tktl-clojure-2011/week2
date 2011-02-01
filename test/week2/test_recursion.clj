@@ -92,7 +92,7 @@
        (seq-merge [1 5 7 9] [2 2 8 10]) => '(1 2 2 5 7 8 9 10))
 
 (facts "mergesort"
-       (mergesort [])                 => '()
+       (mergesort [])                 => empty?
        (mergesort [1 2 3])            => '(1 2 3)
        (mergesort [5 3 4 17 2 100 1]) => '(1 2 3 4 5 17 100))
 
