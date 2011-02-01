@@ -54,4 +54,7 @@
 (defn permutations [a-seq]
   ":(")
 
+(defn powerset [coll]
+  ":(")
+
 ;(
