@@ -99,5 +99,6 @@
 (facts "permutations"
        (permutations [])      => empty?
        (permutations [1 5 3])
-           => '((1 5 3) (5 1 3) (5 3 1) (1 3 5) (3 1 5) (3 5 1)))
+           => (just [[1 5 3] [5 1 3] [5 3 1] [1 3 5] [3 1 5] [3 5 1]]
+                    :in-any-order))
 
