@@ -90,3 +90,9 @@
               [2 1])    => [[1 2  3]
                             [4 13 6]
                             [7 8  9]])
+
+(facts "monotonic-prefix"
+       (monotonic-prefix [1 2 3 1]) => (just 1 2 3)
+       (monotonic-prefix [1 3 10 9 2]) => (just 1 3 10)
+       (monotonic-prefix [3 2 3 1]) => (just 3 2)
+       (monotonic-prefix [7 6 1 0 10]) => (just 7 6 1 0))
