@@ -3,8 +3,8 @@
 (defn read-words []
   "Read a line and split it into words. Returns the words as a vector
   of strings."
-  (let [line (read-line)]
-    (vec (.split line " "))))
+  (if-let [line (read-line)]
+    (vec (.split line "\\s+"))))
 
 (defn string->number [string]
   (try
