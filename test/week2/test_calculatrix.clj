@@ -39,15 +39,8 @@
        (string->number "2 3") => nil
        (string->number "foo") => nil)
 
-(facts "compute"
-       (compute "+" ["2" "2"])   => 4
-       (compute "*" ["3" "2"])   => 6
-       (compute "*" ["bar" "2"]) => nil
-       (compute "foo" ["2" "2"]) => nil)
-
 (facts "Charmeleon"
-       (compute "-" ["2" "1"]) => 1
-       (test-main "- 32 3")    => "29")
+       (test-main "- 32 3") => "29")
 
 (facts "Miles Edgeworth"
        (test-main "+ 2 foo")
