@@ -70,8 +70,10 @@
 
 (facts "rotations"
        (rotations [])      => empty?
-       (rotations [1 2 3]) => '((1 2 3) (2 3 1) (3 1 2))
-       (rotations [:a :b]) => '((:a :b) (:b :a)))
+       (rotations [1 2 3]) => (just [(1 2 3) (2 3 1) (3 1 2)]
+                                    :in-any-order)
+       (rotations [:a :b]) => (just [(:a :b) (:b :a)
+                                     :in-any-order]))
 
 (facts "my-frequencies"
        (my-frequencies []) => {}
