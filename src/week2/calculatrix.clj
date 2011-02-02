@@ -19,7 +19,8 @@
     (when (and first-operand second-operand)
       (case command
         "+" (+ first-operand second-operand)
-        "*" (* first-operand second-operand)))))
+        "*" (* first-operand second-operand)
+        nil))))
 
 (defn main []
   "This is the driver loop of the calculator. It loops by calling itself recursively."
