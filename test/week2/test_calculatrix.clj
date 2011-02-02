@@ -52,7 +52,7 @@
        (test-main "+ 1 1\n* _ 2") => "4")
 
 (facts "The Milkman Conspiracy"
-       (test-main "avg 1 2") => "1.5"
+       (test-main "avg 1 2") => "3/2"
        (test-main "pow 2 3") => "8")
 
 (facts "Godot"
