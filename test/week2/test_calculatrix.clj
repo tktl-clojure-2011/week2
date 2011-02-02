@@ -10,7 +10,8 @@
   (with-open [output (java.io.StringWriter.)]
     (let [f (fn []
               (binding [*out* output]
-                (with-in-str (str input "\n") (main))))
+                (with-in-str (str input "\n" "\n")
+                  (main))))
           get-output (fn []
                        (.trim
                          (last (.split (str output)
