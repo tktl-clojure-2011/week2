@@ -56,7 +56,8 @@
        (test-main "pow 2 3") => "8")
 
 (facts "Godot"
-       (test-main "store a 2\n* a 3") => "6")
+       (test-main "store a 2\n* a 3") => "6"
+       (test-main "store a 42\nstore b a\n+ a b") => "84")
 
 (facts "Bowser"
        (test-main "+ 0 2 5 3") => "10"
