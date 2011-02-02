@@ -29,7 +29,9 @@
        (with-in-str "foo bar" (read-words))
          => ["foo" "bar"]
        (with-in-str "4 2   1" (read-words))
-         => ["4" "2" "1"])
+         => ["4" "2" "1"]
+       (with-in-str "\n" (read-words))
+         => [""])
 
 (facts "string->number"
        (string->number "2")   => 2
