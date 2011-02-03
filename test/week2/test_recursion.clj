@@ -73,7 +73,11 @@
        (rotations [1 2 3]) => (just [[1 2 3] [2 3 1] [3 1 2]]
                                     :in-any-order)
        (rotations [:a :b]) => (just [[:a :b] [:b :a]]
-                                    :in-any-order))
+                                    :in-any-order)
+       (rotations [1 5 9 2]) => (just '(1 5 9 2) '(2 1 5 9)
+				      '(9 2 1 5) '(5 9 2 1)
+				      :in-any-order)
+       (count (rotations [6 5 8 9 2])) => 5)
 
 (facts "my-frequencies"
        (my-frequencies []) => {}
