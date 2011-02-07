@@ -6,7 +6,7 @@
 
 (def *timeout* 100)
 
-(defn test-main [input]
+(defn test-main [input n-result]
   (with-open [output (java.io.StringWriter.)]
     (let [f (fn []
               (binding [*out* output]
@@ -14,9 +14,9 @@
                   (main))))
           get-output (fn []
                        (.flush output)
-                       (let [line (first (.split (str output) "\n"))
+                       (let [line (nth (.split (str output) "\n") n-result)
                              result (last (.split line "=>"))]
-                         ;;(prn "dbg" line result)
+                         ;;(prn "dbg" line result output)
                          (.trim result)))
           task (FutureTask. f)
           thr (Thread. task)]
@@ -42,29 +42,30 @@
        (string->number "foo") => nil)
 
 (facts "Charmeleon"
-       (test-main "- 32 3") => "29")
+       (test-main "- 32 3" 0) => "29")
 
 (facts "Miles Edgeworth"
-       (test-main "+ 2 foo")
+       (test-main "+ 2 foo" 0)
          => "Invalid operand: foo"
-       (test-main "foo 2 3")
+       (test-main "foo 2 3" 0)
          => "Invalid command: foo")
 
 (facts "Manfred von Karma"
-       (test-main "+ 1 1\n* _ 2") => "4")
+       (test-main "+ 1 1\n* _ 2" 1) => "4")
 
 (facts "The Milkman Conspiracy"
-       (test-main "avg 1 2") => "3/2"
-       (test-main "pow 2 3") => "8")
+       (test-main "avg 1 2" 0) => "3/2"
+       (test-main "pow 2 3" 0) => "8")
 
 (facts "Godot"
-       (test-main "store a 2\n* a 3") => "6"
-       (test-main "store a 42\nstore b a\n+ a b") => "84")
+       (test-main "store a 2\n* a 3" 1) => "6"
+       (test-main "store a 42\nstore b a\n+ a b" 2) => "84")
 
 (facts "Bowser"
-       (test-main "+ 0 2 3")
+       (test-main "+ 0 2 3" 0)
          => "Wrong number of arguments to +: expects 2, you gave 3.")
 
 (facts "main"
-       (test-main "+ 2 2") => "4"
-       (test-main "* 0 1") => "0")
+       (test-main "+ 2 2" 0) => "4"
+       (test-main "* 0 1" 0) => "0"
+       (test-main "+ 1 1\n+ 1 2" 1) => "3")
