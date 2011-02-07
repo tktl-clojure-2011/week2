@@ -14,9 +14,9 @@
                   (main))))
           get-output (fn []
                        (.flush output)
-                       (let [line (nth (.split (str output) "\n") n-result)
+                       (let [lines (.split (str output) "\n")
+                             line (or (get lines n-result) "")
                              result (last (.split line "=>"))]
-                         ;;(prn "dbg" line result output)
                          (.trim result)))
           task (FutureTask. f)
           thr (Thread. task)]
@@ -64,7 +64,6 @@
 (facts "Bowser"
        (test-main "pow 1 2 3" 0)
          => "Wrong number of arguments to pow: expects 2, you gave 3.")
-         
 
 (facts "main"
        (test-main "+ 2 2" 0) => "4"
