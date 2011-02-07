@@ -2,9 +2,10 @@
 
 (defn read-words []
   "Read a line and split it into words. Returns the words as a vector
-  of strings."
+  of strings. Loops until a line is available."
   (if-let [line (read-line)]
-    (vec (.split line "\\s+"))))
+    (vec (.split line "\\s+"))
+    (recur)))
 
 (defn string->number [string]
   (try

@@ -4,7 +4,7 @@
   (:import (java.util.concurrent
              TimeoutException TimeUnit FutureTask)))
 
-(def *timeout* 200)
+(def *timeout* 100)
 
 (defn test-main [input]
   (with-open [output (java.io.StringWriter.)]
@@ -13,9 +13,11 @@
                 (with-in-str (str input "\n" "\n")
                   (main))))
           get-output (fn []
-                       (.trim
-                         (last (.split (str output)
-                                       "=>"))))
+                       (.flush output)
+                       (let [line (first (.split (str output) "\n"))
+                             result (last (.split line "=>"))]
+                         ;;(prn "dbg" line result)
+                         (.trim result)))
           task (FutureTask. f)
           thr (Thread. task)]
       (try
