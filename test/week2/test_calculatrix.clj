@@ -64,7 +64,7 @@
 (facts "Bowser"
        (test-main "+ 1 2 3" 0)
          => "6"
-       (test-main "pow 1 2 3")
+       (test-main "pow 1 2 3" 0)
          => "Wrong number of arguments to pow: expects 2, you gave 3.")
          
 
